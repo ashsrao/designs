@@ -1,4 +1,4 @@
-\documentclass[tikz,margin=5pt]{standalone}
+\documentclass[tikz,margin=0pt]{standalone}
 
 \usetikzlibrary{shapes, positioning, fadings, backgrounds, intersections, calc, math}
 
@@ -11,20 +11,20 @@
 
 \begin{scope}
 
-\edef\nsides{11}
+\edef\nsides{9}
 \pgfmathparse{\nsides-1}\edef\nsidesmin{\pgfmathresult};
  
 \def\petal{
   [rounded corners=0] (0,0) %
-  .. controls (0.25,0.25) and (0.66,0.66) .. (0,1.15) %
+  .. controls (0.25,0.25) and (0.66,0.66) .. (0,1.05) %
   .. controls (-0.66,0.66) and (-0.25,0.25) .. (0,0) %
 }
 
 
 \def\petalsmall{
   [rounded corners=0] (0,0) %
-  .. controls (0.12,0.12) and (0.27,0.27) .. (0,0.5) %
-  .. controls (-0.27,0.27) and (-0.12,0.12) .. (0,0) %
+  .. controls (0.1,0.1) and (0.19,0.19) .. (0,0.33) %
+  .. controls (-0.19,0.19) and (-0.1,0.1) .. (0,0) %
 }
 
  
@@ -72,9 +72,9 @@
     \draw [rotate=\thisangle] \petal; 
 }
 
-\node[regular polygon, draw=white, fill=white, regular polygon sides=\nsides, minimum size=1.35cm] {};
-\node[regular polygon, regular polygon sides=\nsides, minimum size=1.45cm] (A) {};
-\node[regular polygon, regular polygon sides=\nsides, minimum size=1.3cm] (B) {};
+\node[regular polygon, draw=white, fill=white, regular polygon sides=\nsides, minimum size=0.95cm] {};
+\node[regular polygon, regular polygon sides=\nsides, minimum size=1.1cm] (A) {};
+\node[regular polygon, regular polygon sides=\nsides, minimum size=0.99cm] (B) {};
 
 \foreach \cnt in {0,...,\nsidesmin} {
 %%\foreach \i/\j/\p/\q in {1/3/2/4, 3/5/4/6, 5/7/6/8, 7/9/8/1, 9/2/1/3, 2/4/3/5, 4/6/5/7, 6/8/7/9, 8/1/9/2} {
@@ -110,7 +110,7 @@
 
 %\draw [black, fill=white] (0,0) circle(0.3cm);
 %\draw [black, fill=white] (0,0) circle(0.1cm);
-\node[regular polygon, draw, fill=white, regular polygon sides=\nsides, minimum size=0.55cm] {};
+\node[regular polygon, draw, fill=white, regular polygon sides=\nsides, minimum size=0.5cm] {};
 \node[regular polygon, draw, fill=white, regular polygon sides=\nsides, minimum size=0.4cm] {};
 
 \end{scope}

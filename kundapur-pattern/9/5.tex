@@ -1,4 +1,4 @@
-\documentclass[tikz,margin=5pt]{standalone}
+\documentclass[tikz,margin=0pt]{standalone}
 
 \usetikzlibrary{shapes, positioning, fadings, backgrounds, intersections, calc, math}
 
@@ -16,13 +16,13 @@
  
 \def\petal{
   [rounded corners=0] (0,0) %
-  .. controls (0.25,0.25) and (0.66,0.66) .. (0,1.06) %
+  .. controls (0.25,0.25) and (0.66,0.66) .. (0,1.027) %
   .. controls (-0.66,0.66) and (-0.25,0.25) .. (0,0) %
 }
  
 % declare the polygons A is the outer one, and B is the inner one.  
 \node[regular polygon, regular polygon sides=\nsides, minimum size=3cm] (A) {};
-\node[regular polygon, regular polygon sides=\nsides, minimum size=2.8cm] (B) {};
+\node[regular polygon, regular polygon sides=\nsides, minimum size=2.7cm] (B) {};
 
 % Repeat for each edge. 
 
@@ -58,19 +58,21 @@
 %\pgfmathparse{\petalangle/2}\edef\petalangleoffset{\pgfmathresult};
 \edef\petalangleoffset{0}
 
-
 \foreach \angle in {\petalangle,\petalstephint,...,360} {
     \pgfmathparse{\angle+\petalangleoffset}\edef\thisangle{\pgfmathresult};
     \draw [rotate=\thisangle] \petal; 
 }
+
 % Now draw an inner circle
 %\draw [black, fill=white] (0,0) circle(0.44cm);
 \foreach \angle in {\petalangle,\petalstephint,...,360} {
     \pgfmathparse{\angle+3*\petalangle/4}\edef\thisangle{\pgfmathresult};
     \draw (\thisangle:0.44) -- (\thisangle:0.66);
 }
+
 \draw [black, fill=white] (0,0) circle(0.44cm); 
-\draw [black, fill=white] (0,0) circle(0.22cm); 
+\draw [black] (0,0) circle(0.22cm); 
+
 \end{scope}
 
 \end{tikzpicture}

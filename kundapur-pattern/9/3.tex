@@ -1,4 +1,4 @@
-\documentclass[tikz,margin=5pt]{standalone}
+\documentclass[tikz,margin=0pt]{standalone}
 
 \usetikzlibrary{shapes, positioning, fadings, backgrounds, intersections, calc, math}
 
@@ -11,7 +11,7 @@
 
 \begin{scope}
 
-\edef\nsides{11}
+\edef\nsides{9}
 \pgfmathparse{\nsides-1}\edef\nsidesmin{\pgfmathresult};
  
 \def\petal{
@@ -68,9 +68,9 @@
 % Now draw an inner circle
 %\draw [black, fill=white] (0,0) circle(0.66cm);
 %\draw [black, fill=white] (0,0) circle(0.44cm);
-\node[regular polygon, regular polygon sides=\nsides, minimum size=1.3cm] (A) {};
-\node[regular polygon, regular polygon sides=\nsides, minimum size=1.2cm] (B) {};
-\node[regular polygon, fill=white, white, regular polygon sides=\nsides, minimum size=1.3cm] (A) {};
+\node[regular polygon, regular polygon sides=\nsides, minimum size=0.88cm] (A) {};
+\node[regular polygon, regular polygon sides=\nsides, minimum size=0.77cm] (B) {};
+\node[regular polygon, fill=white, white, regular polygon sides=\nsides, minimum size=0.88cm] (A) {};
 %\node[regular polygon, fill=white, white, regular polygon sides=\nsides, minimum size=0.66cm] (B) {};
 
 \foreach \cnt in {0,...,\nsidesmin} {
@@ -99,8 +99,8 @@
     \draw [black] (IFH) -- (B.corner \q); 
 }
 
-\draw [black, fill=white] (0,0) circle(0.33cm);
-\draw [black, fill=white] (0,0) circle(0.22cm);
+\draw [black, fill=white] (0,0) circle(0.18cm);
+\draw [black, fill=white] (0,0) circle(0.11cm);
 \end{scope}
 
 \end{tikzpicture}
