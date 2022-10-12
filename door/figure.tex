@@ -1,0 +1,94 @@
+\documentclass{article}
+
+\usepackage[paperheight=1450mm,paperwidth=1200mm,margin=50mm]{geometry}
+\usepackage{colortbl}
+\usepackage{graphicx}
+
+\usepackage{subcaption}
+
+\graphicspath{{./patterns/}}
+%\definecolor{doorgreen}{rgb}{0.47,0.66,0.44}    
+\definecolor{doorgreen}{rgb}{1,1,1}    
+%\usepackage{tabularray}
+
+\begin{document}
+
+%https://convertingcolors.com/rgb-color-116_158_114.html?search=RGB(116,%20158,%20114)
+
+\fcolorbox{black}{doorgreen}{
+
+    \begin{minipage}[][1300mm][t]{1100mm}
+    \vspace{100mm}
+    \hspace{100mm}
+    \fbox{
+        \begin{minipage}[][500mm][c]{200mm}
+        \centering
+        \fbox{
+            \begin{minipage}[][420mm][c]{120mm}
+            \includegraphics[width=120mm]{1.pdf}
+            \end{minipage}
+        }
+        \end{minipage}
+    }
+    \hspace{100mm}
+    \fbox{
+        \begin{minipage}[][500mm][c]{200mm}
+        \centering
+        \fbox{
+            \begin{minipage}[][420mm][c]{120mm}
+            \includegraphics[width=120mm]{2.pdf}
+            \end{minipage}
+        }
+        \end{minipage}
+    }
+    \hspace{200mm}    
+    \fbox{
+        \begin{minipage}[][500mm][c]{200mm}
+        \centering
+        \fbox{
+            \begin{minipage}[][420mm][c]{120mm}
+            \includegraphics[width=120mm]{3.pdf}
+            \end{minipage}
+        }
+        \end{minipage}
+    } 
+    % new row 
+    
+    \vspace{100mm}
+    \hspace{100mm}
+    \fbox{
+        \begin{minipage}[][500mm][c]{200mm}
+        \centering
+        \fbox{
+            \begin{minipage}[][420mm][c]{120mm}
+            \includegraphics[width=120mm]{4.pdf}
+            \end{minipage}
+        }
+        \end{minipage}
+    }
+    \hspace{100mm}
+    \fbox{
+        \begin{minipage}[][500mm][c]{200mm}
+        \centering
+        \fbox{
+            \begin{minipage}[][420mm][c]{120mm}
+            \includegraphics[width=120mm]{5.pdf}
+            \end{minipage}
+        }
+        \end{minipage}
+    }
+    \hspace{200mm}    
+    \fbox{
+        \begin{minipage}[][500mm][c]{200mm}
+        \centering
+        \fbox{
+            \begin{minipage}[][420mm][c]{120mm}
+            \includegraphics[width=120mm]{6.pdf}
+            \end{minipage}
+        }
+        \end{minipage}
+    }    
+    \end{minipage}
+}
+
+\end{document}
