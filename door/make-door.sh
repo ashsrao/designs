@@ -31,3 +31,5 @@ mv figure.pdf ${designid}.pdf
 latexmk -C
 latexmk -c
 evince ${designid}.pdf
+
+# Example: ./make-door.sh 9 1 11 1 9 2 9 1 11 1 9 2
